@@ -1,32 +1,35 @@
-# Prerequisites
-*.d
+#include <stdio.h>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+int main()
+{
+    int i, j, N;
 
-# Precompiled Headers
-*.gch
-*.pch
+ printf("Ingrese numero de FILAS: ");
+    scanf("%d", &N);
+    
+    //For que hara que se empiece por el numero elegido previamente
+    for(i=N; i>=1; i--)
+    {
+        //Imprime la primera parte
+        for(j=1; j<=i; j++)
+        {
+            printf("%d", j);
+        }
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+        // Imprime los espacios 
+        for(j=i*2; j<N*2; j++)
+        {
+            printf(" ");
+        }
 
-# Fortran module files
-*.mod
-*.smod
+        // Imprime la segunda parte
+        for(j=i; j>=1; j--)
+        {
+            printf("%d", j);
+        }
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+        printf("\n");
+    }
 
-# Executables
-*.exe
-*.out
-*.app
+    return 0;
+}
